@@ -29,9 +29,10 @@ class  Fenetre(QMainWindow):
 
         self.createActions()
         self.createMenus()
+        self.createToolBars()
         self.resize(360,145)
         self.show()
-    
+        self.statusBar()
 
         
         
@@ -67,13 +68,6 @@ class  Fenetre(QMainWindow):
         self.fileToolBar.addAction(self.saveAct)
 
     def createMenus(self):
-        """ self.fileMenu = self.menuBar()
-        self.fileMenu.addMenu("&File")
-        self.fileMenu.addAction(self.newAct)
-        self.fileMenu.addAction(self.openAct)
-        self.fileMenu.addAction(self.saveAct)
-        """
-
         self.menuBar = self.menuBar()
         self.fileMenu = self.menuBar.addMenu("&File")
         self.fileMenu.addAction(self.newAct)
