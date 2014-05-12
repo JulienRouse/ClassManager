@@ -1,0 +1,6 @@
+francais Francais
+mathematiques Mathematiques
+sport Sport
+histoire Histoire
+svt SVT
+geographie Geographie
