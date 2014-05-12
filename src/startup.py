@@ -1,4 +1,6 @@
-from metier import ClassManager, Classe, Eleve
+from metier import (ClassManager, Classe,
+                    Eleve, CarnetDeNote,
+                    Matiere)
 
 
 cm = ClassManager()
@@ -14,3 +16,5 @@ cm.listClass[0].addEleve(e1)
 cm.listClass[0].addEleve(e2)
 cm.listClass[0].printClasse()
 
+cdn = CarnetDeNote()
+cdn.printMatiereName()
