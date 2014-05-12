@@ -25,6 +25,16 @@ class Matiere(object):
         self.listTest = [x for x in self.listTest if date != x[0]]
         self.calcMoyenne()
 
+    def updateNoteTestByDate(self,date,note=None):
+        """
+        update note
+        """
+        if note is not None:
+            for elt in self.listTest:
+                if elt[0] == date:
+                    elt[1]=note
+            self.calcMoyenne()
+
     def calcMoyenne(self):
         """
         calcule la moyenne des notes contenues
@@ -37,12 +47,13 @@ class Matiere(object):
         moy = sum(tmp) / float(len(tmp))
         self.moyenne = moy
 
+
 class CarnetDeNote(object):
     def __init__(self):
         self.moyenneGenerale = -1
         self.appreciationGenerale = "No Comment"
         self.initDictMatiere("../misc/matiere_config.txt")
-    
+        
     def initDictMatiere(self,filename):
         """
         lit un fichier filename de format key name_matiere
