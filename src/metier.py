@@ -17,6 +17,14 @@ class Matiere(object):
         self.listTest.append((date,note,commentaire))
         self.calcMoyenne()
 
+    def removeTestByDate(self,date):
+        """
+        remove elements of listTest
+        using the date
+        """
+        self.listTest = [x for x in self.listTest if date != x[0]]
+        self.calcMoyenne()
+
     def calcMoyenne(self):
         """
         calcule la moyenne des notes contenues
