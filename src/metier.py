@@ -8,7 +8,9 @@ class Matiere(object):
         self.commentaire = ""
         self.listTest = []
         self.moyenne = -1
-        
+    
+    def setCommentaire(self, com):
+        self.commentaire = com
     def addTest(self, date, note, commentaire='No Comment'):
         """
         date au format 'jj/mm/yy'
