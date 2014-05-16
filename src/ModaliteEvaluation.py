@@ -83,7 +83,11 @@ class ModaliteEvaluation(QWidget):
         layout.addWidget(self.leDate3Fin,5,3)
         #button
         layout.addWidget(self.boutonValidateDate,6,4)
-        self.setLayout(layout)
+        
+        layout2 = QVBoxLayout()
+        layout2.addLayout(layout)
+        layout2.addStretch()
+        self.setLayout(layout2)
 
     def onValidation(self):
         pass
