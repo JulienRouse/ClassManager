@@ -64,25 +64,38 @@ class ModaliteEvaluation(QWidget):
         ######################
         self.boutonValidateDate = QPushButton("save",self)
         self.boutonValidateDate.clicked.connect(self.onValidation)
-        
+        ############
+        #label vide#
+        ############
+        self.labelVide = QLabel(self)
+        self.labelVide.setText("        ")
         layout = QGridLayout()
-        layout.addWidget(self.labelTitre,1,0,1,4)
+        layout.addWidget(self.labelTitre,1,0,1,5)
         layout.addWidget(self.labelDebut,2,2)
-        layout.addWidget(self.labelFin,2,3)
+        layout.addWidget(self.labelFin,2,4)
         #1ere periode
         layout.addWidget(self.labelPeriode1,3,0)
+        layout.addWidget(self.labelVide,3,1)
         layout.addWidget(self.leDate1Debut,3,2)
-        layout.addWidget(self.leDate1Fin,3,3)
+        layout.addWidget(self.labelVide,3,3)
+        layout.addWidget(self.leDate1Fin,3,4)
+        layout.addWidget(self.labelVide,3,5)
         #2eme periode
         layout.addWidget(self.labelPeriode2,4,0)
+        layout.addWidget(self.labelVide,4,1)
         layout.addWidget(self.leDate2Debut,4,2)
-        layout.addWidget(self.leDate2Fin,4,3)
+        layout.addWidget(self.labelVide,4,3)
+        layout.addWidget(self.leDate2Fin,4,4)
+        layout.addWidget(self.labelVide,4,5)
         #3eme periode
         layout.addWidget(self.labelPeriode3,5,0)
+        layout.addWidget(self.labelVide,5,1)
         layout.addWidget(self.leDate3Debut,5,2)
-        layout.addWidget(self.leDate3Fin,5,3)
+        layout.addWidget(self.labelVide,5,3)
+        layout.addWidget(self.leDate3Fin,5,4)
+        layout.addWidget(self.labelVide,5,5)
         #button
-        layout.addWidget(self.boutonValidateDate,6,4)
+        layout.addWidget(self.boutonValidateDate,6,5)
         
         layout2 = QVBoxLayout()
         layout2.addLayout(layout)
