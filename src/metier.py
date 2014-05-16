@@ -100,7 +100,8 @@ class Classe(object):
         self.name = name
         self.listEleves = []
         self.classeId = -1
-    
+        self.classeNiveaux = []
+
     def setId(self, classeId):
         self.classeId = classeId
 
